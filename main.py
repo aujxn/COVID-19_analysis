@@ -6,8 +6,8 @@ from plotly.subplots import make_subplots
 
 data = pd.read_csv('./COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv', sep=',')
 
-china = data.query("Region == 'China'").iloc[:, 4:34]
-other = data.query("Region != 'China'").iloc[:, 4:34]
+china = data.query("Region == 'China'").iloc[:, 4:]
+other = data.query("Region != 'China'").iloc[:, 4:]
 dates = data.columns.values[4:]
 
 china_total = china.sum();
